@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+body {
+    background-color: #b8b4c0;
+}
+
+h1 {
+    color: #434380;
+}
+
+p {
+    color: #1b1627;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #7c2fbb;
+    color: white;
+}
+
+.dbtable {
+	width:100%;
+	border:1px solid #EEEEEE;
+}

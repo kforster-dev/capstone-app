@@ -1,0 +1,29 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "192.168.1.2:5000:5000"
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: secret
+      MYSQL_DB: void
+    volumes:
+      - .:/voidapp:ro
+    depends_on:
+      - mysql
+    restart: always
+
+  mysql:
+    image: mysql
+    volumes:
+      - sql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: void
+    restart: always
+
+volumes:
+  sql-data:

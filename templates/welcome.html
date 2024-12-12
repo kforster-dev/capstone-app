@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Void Admin Hub</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            font-family: "Lato", sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="/admin">Admin</a>
+        <a href="/logs">Logs</a>
+    </div>
+
+    <h1>Temporary Display</h1>
+    <p>Hello {{ fname }} {{ lname }}.</p>
+    <p>Your new Wraithcore Address will be: {{ username }}@wraithcore.com</p>
+    <p>You have requested this user be added to the folling groups: {{ newgroups }}</p>
+
+    {{ table|safe }}
+</body>
+</html>
